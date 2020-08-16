@@ -17,6 +17,7 @@ public class MyWorkerClass extends Worker {
     public Result doWork() {
         Context applicationContext = getApplicationContext();
         String TAG = "MyWorkerClass";
+
         String msg  = getInputData().getString("MSG");
         // Notification not obligatory but useful
         WorkerUtils.makeStatusNotification("Worker class initiated: " + msg, applicationContext);
